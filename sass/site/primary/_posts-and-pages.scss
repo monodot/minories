@@ -26,3 +26,14 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.entry-title {
+	font-size: $font__entry-title;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	margin-top: 0;
+}
+.entry-title a {
+	color: $color__text-entry-title;
+	text-decoration: none; 
+}

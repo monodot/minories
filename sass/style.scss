@@ -6,7 +6,7 @@ Author URI: http://monodot.co.uk
 Description: Technical blog theme
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-2.0.*html
 Text Domain: minories
 Tags:
 
@@ -105,3 +105,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/* Layout */
+@import "layout/site-header";
+@import "layout/content-sidebar";

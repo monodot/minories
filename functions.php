@@ -111,6 +111,48 @@ function minories_widgets_init() {
 add_action( 'widgets_init', 'minories_widgets_init' );
 
 /**
+ * Generate Google Fonts URL
+ *
+ * @link http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
+ */
+function minories_fonts_url() {
+	$fonts_url = '';
+ 
+	/* Translators: If there are characters in your language that are not
+	* supported by Lora, translate this to 'off'. Do not translate
+	* into your own language.
+	*/
+	$lora = _x( 'on', 'Lora font: on or off', 'minories' );
+ 
+	/* Translators: If there are characters in your language that are not
+	* supported by Open Sans, translate this to 'off'. Do not translate
+	* into your own language.
+	*/
+	$karla = _x( 'on', 'Open Sans font: on or off', 'minories' );
+	
+ 
+	if ( 'off' !== $lora || 'off' !== $karla ) {
+		$font_families = array();
+ 
+		if ( 'off' !== $lora ) {
+			$font_families[] = 'Lora:400,700,400italic';
+		}
+ 
+		if ( 'off' !== $karla ) {
+			$font_families[] = 'Open Sans:400,400italic,600,700,700italic';
+		}
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+ 
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css');
+	}
+ 
+	return esc_url_raw( $fonts_url );
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function minories_scripts() {
@@ -119,6 +161,8 @@ function minories_scripts() {
 	wp_enqueue_script( 'minories-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'minories-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_style( 'minories-fonts', minories_fonts_url(), array(), null );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
