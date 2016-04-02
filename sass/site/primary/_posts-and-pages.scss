@@ -22,7 +22,52 @@
 	margin: 1.5em 0 0;
 }
 
+.entry-meta {
+	span {
+		line-height: $size__byline-height;
+	}
+	
+	.posted-on {
+		margin-left: 1rem;
+		padding-left: 1rem;
+		border-left: solid 1px $color__border-meta-info;
+	};
+}
+	
+
+
+.entry-content > p:first-of-type {
+	font-size: 1.2rem;
+};
+
+.entry-content {
+	blockquote {
+		border-left: solid 3px $color__border-blockquote;
+		padding-left: 1rem;		
+	}
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.entry-title {
+	font-size: $font__entry-title;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	margin-top: 0;
+	line-height: 1em;
+
+	a {
+		color: $color__text-entry-title;
+		text-decoration: none; 
+		
+		.entry-subtitle {
+			line-height: 1em;
+			margin: 0.5em 0;
+			color: $color__text-entry-subtitle;
+			
+		}
+	}
 }

@@ -1,20 +1,42 @@
-$color__background-body: #fff;
+$color__accent: #E63946;
+$color__background: #F4F4F8; //#E6E6EA;
+$color__content: #FFFFFF; //#F4F4F8;
+$color__headings: #114B5F;
+$color__friendly: #86A55E;
+
+$color__background-body: $color__background; //#C0BCB5; //#F6F0ED; //#f6f6f6;
+$color__background-site-header: $color__content; //#ffffff;
+$color__background-article: $color__content;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
+$color__background-widget: #ffffff;
+$color__background-submenu: #ffffff;
+$color__background-footer: $color__content;
 
 $color__text-screen: #21759b;
+$color__text-headings: $color__headings;
+$color__text-site-header: #ffffff;
+$color__text-site-title: $color__headings; //#3D7191; //#818896;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
+$color__link: #3498db; //#1A936F; //#114B5F; //#3D7191; //#28536B; //#4F86C6;
+$color__link-visited: #7EA8BE;
 $color__link-hover: midnightblue;
-$color__text-main: #404040;
+$color__text-main: #818896; //#2e3137; //#818896; //#404040;
+$color__text-entry-title: $color__headings; //#28536B;
+$color__text-entry-subtitle: $color__text-main;
+$color__text-entry-headings: $color__friendly;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+$color__border-widget: darken($color__background-body, 15); //#e7e7e7;
+$color__border-meta-info: darken($color__background-article, 15);
+$color__border-site-title: $color__friendly; //#D83643; //#cccccc;
+$color__border-footer-site-info: #eeeeee;
+$color__border-blockquote: $color__accent;
