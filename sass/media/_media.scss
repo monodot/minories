@@ -14,6 +14,22 @@ object {
 	max-width: 100%;
 }
 
+.wp-post-image.size-article-thumb {
+	/*display: inline-block;*/
+	float: right;
+	max-width: $size__thumb-article-thumb;
+	margin-left: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.avatar {
+	border-radius: 50px;
+	max-width: $size__byline-height;
+	height: auto;
+	margin-right: 6px;
+	float: left;
+}
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/

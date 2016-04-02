@@ -22,4 +22,5 @@
 .site-footer {
 	clear: both;
 	width: 100%;
+	background: $color__background-footer;
 }

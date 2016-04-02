@@ -314,6 +314,13 @@ textarea {
 /* line 1, sass/typography/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  font-family: "Open Sans", sans-serif;
+  color: #114B5F;
+}
+
+/* line 8, sass/typography/_headings.scss */
+.entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+  color: #86A55E;
 }
 
 /* line 1, sass/typography/_copy.scss */
@@ -391,7 +398,7 @@ html {
 
 /* line 11, sass/elements/_elements.scss */
 body {
-  background: #f6f6f6;
+  background: #F4F4F8;
   /* Fallback for when there is no custom background color defined. */
 }
 
@@ -577,11 +584,11 @@ textarea {
 --------------------------------------------------------------*/
 /* line 1, sass/navigation/_links.scss */
 a {
-  color: #4F86C6;
+  color: #3498db;
 }
 /* line 4, sass/navigation/_links.scss */
 a:visited {
-  color: purple;
+  color: #7EA8BE;
 }
 /* line 7, sass/navigation/_links.scss */
 a:hover, a:focus, a:active {
@@ -601,24 +608,24 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 /* line 1, sass/navigation/_menus.scss */
 .main-navigation {
-  clear: both;
+  /*clear: both;*/
   display: block;
-  float: left;
   width: 100%;
 }
-/* line 7, sass/navigation/_menus.scss */
+/* line 6, sass/navigation/_menus.scss */
 .main-navigation ul {
   display: none;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
-/* line 13, sass/navigation/_menus.scss */
+/* line 12, sass/navigation/_menus.scss */
 .main-navigation ul ul {
+  background: #ffffff;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
   position: absolute;
-  top: 1.5em;
+  top: 70px;
   left: -999em;
   z-index: 99999;
 }
@@ -649,47 +656,91 @@ a:hover, a:active {
 .main-navigation a {
   display: block;
   text-decoration: none;
+  padding: 25px 30px;
 }
 
 /* Small menu. */
-/* line 74, sass/navigation/_menus.scss */
+/* line 75, sass/navigation/_menus.scss */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-  /* line 80, sass/navigation/_menus.scss */
+  /* line 81, sass/navigation/_menus.scss */
   .menu-toggle {
     display: none;
   }
 
-  /* line 83, sass/navigation/_menus.scss */
+  /* line 84, sass/navigation/_menus.scss */
   .main-navigation ul {
     display: block;
   }
 }
-/* line 92, sass/navigation/_menus.scss */
+/* line 93, sass/navigation/_menus.scss */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
-/* line 97, sass/navigation/_menus.scss */
+/* line 98, sass/navigation/_menus.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%;
 }
-/* line 102, sass/navigation/_menus.scss */
+/* line 103, sass/navigation/_menus.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
   float: right;
   text-align: right;
   width: 50%;
+}
+
+/* line 110, sass/navigation/_menus.scss */
+.site-navigation {
+  float: left;
+}
+
+/* line 114, sass/navigation/_menus.scss */
+.menu {
+  float: right;
+}
+
+/* line 118, sass/navigation/_menus.scss */
+.site-branding {
+  float: left;
+  height: 70px;
+}
+
+/* line 123, sass/navigation/_menus.scss */
+.site-logo {
+  max-height: 70px;
+  width: auto;
+}
+
+/* line 128, sass/navigation/_menus.scss */
+.site-title {
+  font-size: 1.7rem;
+  height: 70px;
+  line-height: 70px;
+  vertical-align: middle;
+  margin: 0 0 0 25px;
+  border-bottom: solid 3px #86A55E;
+}
+/* line 136, sass/navigation/_menus.scss */
+.site-title a {
+  text-decoration: none;
+  color: #114B5F;
+  font-weight: 600;
+}
+
+/* line 145, sass/navigation/_menus.scss */
+.site-header {
+  line-height: 1;
 }
 
 /*--------------------------------------------------------------
@@ -793,32 +844,43 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 /* line 1, sass/site/secondary/_widgets.scss */
 .widget {
-  margin: 0 0 1.5em;
-  padding: 1.5em 0;
-  border-bottom: solid 1px #e7e7e7;
   /* Make sure select elements fit in widgets. */
 }
-/* line 7, sass/site/secondary/_widgets.scss */
+/* line 3, sass/site/secondary/_widgets.scss */
 .widget select {
   max-width: 100%;
 }
-/* line 11, sass/site/secondary/_widgets.scss */
+/* line 7, sass/site/secondary/_widgets.scss */
 .widget ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 16, sass/site/secondary/_widgets.scss */
+/* line 12, sass/site/secondary/_widgets.scss */
 .widget ul li {
   margin: 0 0 10px;
 }
 
-/* line 22, sass/site/secondary/_widgets.scss */
+/* line 18, sass/site/secondary/_widgets.scss */
 .widget-title {
   font-size: 16pt;
   font-weight: 600;
   text-transform: uppercase;
   margin-top: 0;
+}
+
+/* line 25, sass/site/secondary/_widgets.scss */
+.site-content .widget-area .widget {
+  margin: 0 0 1.5em;
+  padding: 1.5em 0;
+  border-bottom: solid 1px #c5c5da;
+}
+
+/* line 30, sass/site/secondary/_widgets.scss */
+.site-footer .widget-area .widget {
+  display: inline-block;
+  width: 23%;
+  vertical-align: top;
 }
 
 /*--------------------------------------------------------------
@@ -856,24 +918,52 @@ a:hover, a:active {
   margin: 1.5em 0 0;
 }
 
-/* line 25, sass/site/primary/_posts-and-pages.scss */
+/* line 26, sass/site/primary/_posts-and-pages.scss */
+.entry-meta span {
+  line-height: 30px;
+}
+/* line 30, sass/site/primary/_posts-and-pages.scss */
+.entry-meta .posted-on {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: solid 1px #d9d9d9;
+}
+
+/* line 39, sass/site/primary/_posts-and-pages.scss */
+.entry-content > p:first-of-type {
+  font-size: 1.2rem;
+}
+
+/* line 44, sass/site/primary/_posts-and-pages.scss */
+.entry-content blockquote {
+  border-left: solid 3px #E63946;
+  padding-left: 1rem;
+}
+
+/* line 50, sass/site/primary/_posts-and-pages.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
 }
 
-/* line 30, sass/site/primary/_posts-and-pages.scss */
+/* line 55, sass/site/primary/_posts-and-pages.scss */
 .entry-title {
   font-size: 28pt;
   font-weight: 600;
   margin-bottom: 0.5rem;
   margin-top: 0;
+  line-height: 1em;
 }
-
-/* line 36, sass/site/primary/_posts-and-pages.scss */
+/* line 62, sass/site/primary/_posts-and-pages.scss */
 .entry-title a {
-  color: #000000;
+  color: #114B5F;
   text-decoration: none;
+}
+/* line 66, sass/site/primary/_posts-and-pages.scss */
+.entry-title a .entry-subtitle {
+  line-height: 1em;
+  margin: 0.5em 0;
+  color: #818896;
 }
 
 /*--------------------------------------------------------------
@@ -896,6 +986,13 @@ a:hover, a:active {
 /* line 4, sass/site/primary/_comments.scss */
 .bypostauthor {
   display: block;
+}
+
+/* line 8, sass/site/primary/_comments.scss */
+.comments-area {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 8px;
 }
 
 /*--------------------------------------------------------------
@@ -934,6 +1031,24 @@ embed,
 iframe,
 object {
   max-width: 100%;
+}
+
+/* line 17, sass/media/_media.scss */
+.wp-post-image.size-article-thumb {
+  /*display: inline-block;*/
+  float: right;
+  max-width: 250px;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* line 25, sass/media/_media.scss */
+.avatar {
+  border-radius: 50px;
+  max-width: 30px;
+  height: auto;
+  margin-right: 6px;
+  float: left;
 }
 
 /*--------------------------------------------------------------
@@ -1016,8 +1131,9 @@ object {
 /* Layout */
 /* line 1, sass/layout/_site-header.scss */
 .site-header {
-  background: #379392;
+  background: #FFFFFF;
   color: #ffffff;
+  /*box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);*/
 }
 
 /* line 1, sass/layout/_content-sidebar.scss */
@@ -1047,17 +1163,31 @@ object {
 /* line 21, sass/layout/_content-sidebar.scss */
 .site-footer {
   clear: both;
-  width: 95%;
+  background: #FFFFFF;
+}
+/* line 27, sass/layout/_content-sidebar.scss */
+.site-footer .footer-wrapper {
+  padding: 4rem 2rem;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
-/* line 26, sass/layout/_content-sidebar.scss */
+/* line 34, sass/layout/_content-sidebar.scss */
+.site-info {
+  padding: 2rem;
+  margin-top: 2rem;
+  border-top: solid 1px #eeeeee;
+  text-align: center;
+}
+
+/* line 42, sass/layout/_content-sidebar.scss */
 article.post {
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 2rem;
   border-radius: 8px;
 }
 
-/* line 32, sass/layout/_content-sidebar.scss */
+/* line 48, sass/layout/_content-sidebar.scss */
 .site-wrapper {
   margin: 0 auto;
   max-width: 1100px;

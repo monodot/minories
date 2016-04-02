@@ -1,8 +1,4 @@
 .widget {
-	margin: 0 0 1.5em;
-	padding: 1.5em 0;
-	border-bottom: solid 1px $color__border-widget;
-
 	/* Make sure select elements fit in widgets. */
 	select {
 		max-width: 100%;
@@ -26,4 +22,13 @@
 	margin-top: 0;
 }
 
-
+.site-content .widget-area .widget {
+	margin: 0 0 1.5em;
+	padding: 1.5em 0;
+	border-bottom: solid 1px $color__border-widget;
+}
+.site-footer .widget-area .widget {
+	display: inline-block;
+	width: 23%;
+	vertical-align: top;
+}

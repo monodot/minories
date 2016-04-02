@@ -20,7 +20,23 @@
 
 .site-footer {
 	clear: both;
-	width: $size__site-main;
+	//width: $size__site-main;
+	background: $color__background-footer;
+	
+	
+	.footer-wrapper {
+		padding: 4rem 2rem;
+		max-width: 95%;
+		margin: 0 auto;
+	}
+}
+
+.site-info {
+	padding: 2rem;
+	margin-top: 2rem;
+	border-top: solid 1px $color__border-footer-site-info;
+	text-align: center;
+	
 }
 
 article.post {

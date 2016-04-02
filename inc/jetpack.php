@@ -23,6 +23,19 @@ function minories_jetpack_setup() {
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
+	
+	/*
+	// Add theme support for logo
+	add_image_size( 'minories-logo', 140, 140 );
+	add_theme_support( 'site-logo', array(
+		'size' => 'minories-logo',
+	    'header-text' => array(
+	        'site-title',
+	        'site-description',
+	    ),
+
+	) );
+	*/
 }
 add_action( 'after_setup_theme', 'minories_jetpack_setup' );
 

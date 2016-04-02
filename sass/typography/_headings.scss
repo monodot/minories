@@ -1,3 +1,11 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: $font__headings;
+	color: $color__text-headings;
+}
+
+.entry-content {
+	h2, h3, h4, h5, h6 {
+		color: $color__text-entry-headings;
+	}
 }
