@@ -48,7 +48,7 @@
 			left: auto;
 		}
 	}
-	
+
 	li {
 		float: left;
 		position: relative;
@@ -57,7 +57,7 @@
 		&.focus > a {
 		}
 	}
-	
+
 	a {
 		display: block;
 		text-decoration: none;
@@ -132,14 +132,14 @@
 	vertical-align: middle;
 	margin: 0 0 0 $size__header-footer-gutter;
 	border-bottom: solid 3px $color__border-site-title;
-	  
+
 	a {
 		text-decoration: none;
 		color: $color__text-site-title;
 		font-weight: 600;
-		
+
 	}
-	
+
 }
 
 .site-header {
