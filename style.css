@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Tom Donohue
 Author URI: http://monodot.co.uk
 Description: Technical blog theme
-Version: 1.1.0
+Version: 1.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: minories
@@ -451,6 +451,56 @@ dd {
   margin: 0 1.5em 1.5em;
 }
 
+/* Inspired by http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/ */
+/* line 29, sass/elements/_lists.scss */
+.entry-content ol {
+  counter-reset: li;
+  margin-left: 0;
+  padding-left: 0;
+}
+/* line 34, sass/elements/_lists.scss */
+.entry-content ol > li {
+  position: relative;
+  margin: 0 0 6px 2em;
+  padding: 0.5em 0 0.5em 1em;
+  list-style: none;
+  border-top: 2px solid #666;
+  /*background: #f6f6f6;*/
+}
+/* line 42, sass/elements/_lists.scss */
+.entry-content ol > li:before {
+  content: counter(li);
+  /* Use the counter as content */
+  counter-increment: li;
+  /* Increment the counter by 1 */
+  /* Position and style the number */
+  position: absolute;
+  top: -2px;
+  left: -2em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 2em;
+  /* Some space between the number and the content in browsers that support
+     generated content but not positioning it (Camino 2 is one example) */
+  margin: 0.5em 1em 0.5em 0;
+  padding: 4px;
+  border-top: 2px solid red;
+  color: #fff;
+  background: #666;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+}
+/* line 65, sass/elements/_lists.scss */
+.entry-content li ol, .entry-content li ul {
+  margin-top: 6px;
+}
+/* line 68, sass/elements/_lists.scss */
+.entry-content ol ol li:last-child {
+  margin-bottom: 0;
+}
+
 /* line 33, sass/elements/_elements.scss */
 img {
   height: auto;
@@ -473,17 +523,12 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  border: none;
   border-radius: 3px;
   background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
+  color: #fff;
   line-height: 1;
   padding: .6em 1em .4em;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 /* line 16, sass/forms/_buttons.scss */
 button:hover,
@@ -491,7 +536,6 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 /* line 21, sass/forms/_buttons.scss */
 button:active, button:focus,
@@ -502,7 +546,6 @@ input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 /* line 1, sass/forms/_fields.scss */
@@ -883,6 +926,30 @@ a:hover, a:active {
   vertical-align: top;
 }
 
+/* line 36, sass/site/secondary/_widgets.scss */
+.site-content .widget-area .widget.widget_mailchimpsf_widget {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-top: solid 5px #E63946;
+}
+/* line 42, sass/site/secondary/_widgets.scss */
+.site-content .widget-area .widget.widget_mailchimpsf_widget .widget-title {
+  font-size: 20pt;
+  text-transform: none;
+}
+/* line 47, sass/site/secondary/_widgets.scss */
+.site-content .widget-area .widget.widget_mailchimpsf_widget #mc_subheader {
+  font-size: 13.6px;
+  font-size: 0.85rem;
+}
+/* line 50, sass/site/secondary/_widgets.scss */
+.site-content .widget-area .widget.widget_mailchimpsf_widget #mc_signup_submit {
+  background: #E63946;
+  width: 100%;
+  margin-top: 0em;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1136,43 +1203,44 @@ object {
   /*box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);*/
 }
 
-/* line 1, sass/layout/_content-sidebar.scss */
-.content-area {
-  float: left;
-  margin: 0 -25% 0 0;
-  width: 95%;
-}
+@media only screen and (min-width: 768px) {
+  /* line 2, sass/layout/_content-sidebar.scss */
+  .content-area {
+    float: left;
+    margin: 0 -25% 0 0;
+    width: 95%;
+  }
 
-/* line 7, sass/layout/_content-sidebar.scss */
-.site-main {
-  margin: 0 25% 0 0;
-}
+  /* line 8, sass/layout/_content-sidebar.scss */
+  .site-main {
+    margin: 0 25% 0 0;
+  }
 
-/* line 11, sass/layout/_content-sidebar.scss */
+  /* line 12, sass/layout/_content-sidebar.scss */
+  .site-content .widget-area {
+    float: right;
+    overflow: hidden;
+    width: 25%;
+  }
+}
+/* line 20, sass/layout/_content-sidebar.scss */
 .site-content {
   padding: 2rem;
 }
 
-/* line 15, sass/layout/_content-sidebar.scss */
-.site-content .widget-area {
-  float: right;
-  overflow: hidden;
-  width: 25%;
-}
-
-/* line 21, sass/layout/_content-sidebar.scss */
+/* line 24, sass/layout/_content-sidebar.scss */
 .site-footer {
   clear: both;
   background: #FFFFFF;
 }
-/* line 27, sass/layout/_content-sidebar.scss */
+/* line 30, sass/layout/_content-sidebar.scss */
 .site-footer .footer-wrapper {
   padding: 4rem 2rem;
   max-width: 95%;
   margin: 0 auto;
 }
 
-/* line 34, sass/layout/_content-sidebar.scss */
+/* line 37, sass/layout/_content-sidebar.scss */
 .site-info {
   padding: 2rem;
   margin-top: 2rem;
@@ -1180,14 +1248,14 @@ object {
   text-align: center;
 }
 
-/* line 42, sass/layout/_content-sidebar.scss */
+/* line 45, sass/layout/_content-sidebar.scss */
 article.post {
   background: #FFFFFF;
   padding: 2rem;
   border-radius: 8px;
 }
 
-/* line 48, sass/layout/_content-sidebar.scss */
+/* line 51, sass/layout/_content-sidebar.scss */
 .site-wrapper {
   margin: 0 auto;
   max-width: 1100px;

@@ -24,3 +24,51 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 
+/* Inspired by http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/ */
+.entry-content {
+    ol {
+        counter-reset:li;
+        margin-left:0;
+        padding-left:0;
+        
+        > li {  
+            position:relative;        
+            margin:0 0 6px 2em;
+            padding: 0.5em 0 0.5em 1em; //4px 8px;
+            list-style:none;
+            border-top:2px solid #666;
+            /*background: #f6f6f6;*/
+        }
+        > li:before {
+            content:counter(li); /* Use the counter as content */
+            counter-increment:li; /* Increment the counter by 1 */
+            /* Position and style the number */
+            position:absolute;
+            top:-2px;
+            left:-2em;
+            -moz-box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+            box-sizing:border-box;
+            width:2em;
+            /* Some space between the number and the content in browsers that support
+               generated content but not positioning it (Camino 2 is one example) */
+            margin: 0.5em 1em 0.5em 0; //margin-right:8px;
+            padding:4px;
+            border-top:2px solid red;
+            color:#fff;
+            background:#666;
+            font-weight:bold;
+            font-family:"Helvetica Neue", Arial, sans-serif;
+            text-align:center;
+        };
+    }
+    li ol, li ul {
+        margin-top:6px;
+    }
+    ol ol li:last-child {
+        margin-bottom:0;
+    }
+
+
+}
+
