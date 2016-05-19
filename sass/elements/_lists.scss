@@ -1,5 +1,5 @@
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 0;
 }
 
 ul {
@@ -30,9 +30,9 @@ dd {
         counter-reset:li;
         margin-left:0;
         padding-left:0;
-        
-        > li {  
-            position:relative;        
+
+        > li {
+            position:relative;
             margin:0 0 6px 2em;
             padding: 0.5em 0 0.5em 1em; //4px 8px;
             list-style:none;
@@ -71,4 +71,3 @@ dd {
 
 
 }
-

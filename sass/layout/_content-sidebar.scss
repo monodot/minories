@@ -25,8 +25,8 @@
 	clear: both;
 	//width: $size__site-main;
 	background: $color__background-footer;
-	
-	
+
+
 	.footer-wrapper {
 		padding: 4rem 2rem;
 		max-width: 95%;
@@ -39,16 +39,28 @@
 	margin-top: 2rem;
 	border-top: solid 1px $color__border-footer-site-info;
 	text-align: center;
-	
+
 }
 
+/*
+article {
+  &.post, &.page {
+    background: $color__background-article;
+  	padding: 2rem;
+  	border-radius: 8px;
+  }
+}
+*/
+
+/*
 article.post {
 	background: $color__background-article;
 	padding: 2rem;
 	border-radius: 8px;
 }
+*/
 
-.site-wrapper { 
+.site-wrapper {
 	margin: 0 auto;
 	max-width: $size__site-max-width;
 }

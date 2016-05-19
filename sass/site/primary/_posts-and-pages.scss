@@ -26,14 +26,14 @@
 	span {
 		line-height: $size__byline-height;
 	}
-	
+
 	.posted-on {
 		margin-left: 1rem;
 		padding-left: 1rem;
 		border-left: solid 1px $color__border-meta-info;
 	};
 }
-	
+
 
 
 .entry-content > p:first-of-type {
@@ -43,7 +43,7 @@
 .entry-content {
 	blockquote {
 		border-left: solid 3px $color__border-blockquote;
-		padding-left: 1rem;		
+		padding-left: 1rem;
 	}
 }
 
@@ -61,13 +61,21 @@
 
 	a {
 		color: $color__text-entry-title;
-		text-decoration: none; 
-		
+		text-decoration: none;
+
 		.entry-subtitle {
 			line-height: 1em;
 			margin: 0.5em 0;
 			color: $color__text-entry-subtitle;
-			
+
 		}
 	}
+}
+
+article {
+  &.post, &.page {
+    background: $color__background-article;
+  	padding: 2rem;
+  	border-radius: 8px;
+  }
 }
